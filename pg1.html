@@ -1,19 +1,12 @@
-<style>
-table,td,tr
-{
-	border:solid black;
-	width: 33%;
-	text-align:center;
-	border-collapse:collapse;
-	background-color:darkgreen;
-	color:white;
-}
-table
-{
-	margin:auto;
-}
-</style>
-<script>
+<center>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script>
 function calc(id)
 {
 	let v1 = parseFloat(document.getElementById("val1").value);
@@ -44,29 +37,36 @@ function cls()
 	document.getElementById("answer").value=0;
 }
 </script>
-<body>
-<table border=10 align="center ">
+<style>
+input
+{
+	color:black;
+	background:color:none;	
+}
+</style>
+<body style="background-color:black;color:white;">
+<table border=10 align="center">
 <tr><th colspan="4">Simple Calculator</th></tr>
-<tr><td>value1</td><td><input type="number" id="val1" value=""></td></tr>
-<tr><td>value2</td><td><input type="number" id="val2" value=""></td></tr>
+<tr><td>value1</td><td colspan="3"><input type="number" id="val1" value=""></td></tr>
+<tr><td>value2</td><td colspan="3"><input type="number" id="val2" value=""></td></tr>
 
 <tr>
 	<td>
-		<input type="button" value="Addition" id="add" onclick="calc(this.id)">
+		<input type="button" value="Addition" id="add" onclick="calc(this.id)" class="btn btn-success">
 	</td>
 	<td>
-		<input type="button" value="Subtraction" id="sub" onclick="calc(this.id)">
+		<input type="button" value="Subtraction" id="sub" onclick="calc(this.id)" class="btn btn-info">
 	</td>
 	<td>
-		<input type="button" value="Multiplication" id="mul" onclick="calc(this.id)">
+		<input type="button" value="Multiplication" id="mul" onclick="calc(this.id)" class="btn btn-warning">
 	</td>
 	<td>
-		<input type="button" value="Division" id="div" onclick="calc(this.id)">
+		<input type="button" value="Division" id="div" onclick="calc(this.id)" class="btn btn-primary">
 	</td>
 </tr>
 
 
-<tr><td>Answer</td><td><input type="number" value="0" id="answer" disabled><td colspan="2"><input type="button" value="C / CE" onclick="cls()"></td></tr>
+<tr><td>Answer</td><td colspan="2"><input type="number" value="0" id="answer" disabled><td colspan="1"><input type="button" value="C / CE" onclick="cls()" class="btn btn-danger"></td></tr>
 </table>
 </body>
 
