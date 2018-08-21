@@ -1,0 +1,36 @@
+<style>
+text-align:center;
+</style>
+<p id="inc"></p>
+<p id="dec"></p>
+<script>
+var x = document.querySelector("p#inc");
+var y = document.querySelector("p#dec");
+var i = 12;
+var j = 51;
+function id()
+{
+	if(i<=51)
+	{
+		x.style.fontSize =(i++);
+		x.innerText = "TEXT-GROWING";
+		x.style.color = "red";
+	}
+	else
+	{
+		x.style.display = "none";
+		if(j>=11)
+		{
+			y.style.fontSize =(j--);
+			y.innerText = "TEXT-SHRINKING";
+			y.style.color = "blue";
+		}
+		else
+		{
+			//y.style.display = "none";
+			return;
+		}
+	}
+}
+setInterval(id,100);
+</script>
