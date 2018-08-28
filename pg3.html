@@ -1,5 +1,25 @@
-<p id="inc" style="text-align : center;"></p>
-<p id="dec" style="text-align : center;"></p>
+<!--
+Write a JavaScript code that displays text “TEXT-GROWING” with increasing font
+size in the interval of 100ms in RED COLOR, when the font size reaches 50pt it
+displays “TEXT-SHRINKING” in BLUE color. Then the font size decreases to 5pt.
+-->
+<style>
+p
+{
+	text-align:center;
+	top:50%;
+	left:50%;
+	position:absolute;
+	transform:translate(-50%,-50%);
+}
+body
+{
+	background-color:black;
+}
+</style>
+<body>
+<p id="inc"></p>
+<p id="dec"></p>
 <script>
 var x = document.querySelector("p#inc");
 var y = document.querySelector("p#dec");
@@ -9,7 +29,7 @@ function id()
 {
 	if(i<=51)
 	{
-		x.style.fontSize =(i++);
+		x.style.fontSize =(i++)+"pt";
 		x.innerText = "TEXT-GROWING";
 		x.style.color = "red";
 	}
@@ -18,7 +38,7 @@ function id()
 		x.style.display = "none";
 		if(j>=11)
 		{
-			y.style.fontSize =(j--);
+			y.style.fontSize =(j--)+"pt";
 			y.innerText = "TEXT-SHRINKING";
 			y.style.color = "blue";
 		}
