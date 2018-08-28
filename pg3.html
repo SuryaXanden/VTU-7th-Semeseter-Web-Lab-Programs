@@ -25,18 +25,18 @@ var i = 0;
 var j = 51;
 function id()
 {
-	if(i<=51)
+	if(i<=45)
 	{
-		x.style.fontSize =(i++)+"pt";
+		x.style.fontSize =(i+=5)+"pt";
 		x.innerText = "TEXT-GROWING";
 		x.style.color = "red";
 	}
 	else
 	{
 		x.style.display = "none";
-		if(j>=5)
+		if(j>=10)
 		{
-			y.style.fontSize =(j--)+"pt";
+			y.style.fontSize =(j-=5)+"pt";
 			y.innerText = "TEXT-SHRINKING";
 			y.style.color = "blue";
 		}
