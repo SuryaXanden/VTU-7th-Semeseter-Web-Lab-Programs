@@ -25,24 +25,24 @@ var i = 0;
 var j = 51;
 function id()
 {
-	if(i<=45)
+	if(i<=50)
 	{
-		x.style.fontSize =(i+=5)+"pt";
+		x.style.fontSize =(i++)+"pt";
 		x.innerText = "TEXT-GROWING";
 		x.style.color = "red";
 	}
 	else
 	{
 		x.style.display = "none";
-		if(j>=10)
+		if(j>=5)
 		{
-			y.style.fontSize =(j-=5)+"pt";
+			y.style.fontSize =(j--)+"pt";
 			y.innerText = "TEXT-SHRINKING";
 			y.style.color = "blue";
 		}
 		else
 		{
-			i=0;
+			clearInterval(id);
 		}
 	}
 }
