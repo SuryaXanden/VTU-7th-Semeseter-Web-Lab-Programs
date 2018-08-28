@@ -40,7 +40,7 @@ function gen()
     let d = new Date(Date.UTC(
     <?php echo $today['year'].",".$today['mon'].",".$today['mday'].",".$today['hours'].",".$today['minutes'].",".$today['seconds']; ?>
     ));
-    setInterval(function()
+    function showtime()
     {
         d.setSeconds(d.getSeconds()+1);
 	val='';
@@ -64,5 +64,7 @@ function gen()
 		val += s;        
         //print
         document.querySelector('p#timer').innerText = val;
-    }, 1000);
+    }
+    showtime();
+    setInterval(showtime, 1000);
 </script>
