@@ -44,7 +44,7 @@ div
 		val += h+":";
 	//Minutes
 	let m = d.getMinutes();
-        if(h<10)
+        if(m<10)
 	        val += "0"+m+":";
         else
 		val += m+":";
