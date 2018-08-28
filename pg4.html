@@ -1,0 +1,46 @@
+<!--
+Develop and demonstrate a HTML5 file that includes JavaScript script that uses functions for the following problems:
+
+a)Parameter: A string
+Output: The position in the string of the left-most vowel
+
+b)Parameter: A number
+Output: The number with its digits in the reverse order
+-->
+<script>
+function s(str)
+{
+	str = str.toLowerCase();
+	for(let i = 0 ; i < str.length; i++)
+	{
+		if((str[i]=='a')||(str[i]=='e')||(str[i]=='i')||(str[i]=='o')||(str[i]=='u'))
+		{
+			return i+1;
+		}
+	}
+	return -1;
+}
+
+function n(num)
+{
+	if(!(isNaN(num)))
+	{
+		num = String(num.trim());
+		num = num.split("");
+		num = num.reverse();
+		num = num.join("");
+		return num;
+	}
+	else
+	{
+		return "";
+	}
+}
+let strings = prompt("Enter a string: ","");
+let numbers = prompt("Enter a number: ","");
+let s1='',n1='';
+s1 = s(strings);
+n1 = n(numbers);
+alert("The position of the leftmost vowel: " + s1);
+alert("The reversed number: " + n1);
+</script>
