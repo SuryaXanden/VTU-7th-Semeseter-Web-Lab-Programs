@@ -1,75 +1,56 @@
-<center>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <script>
-function calc(id)
+	const v1 = parseFloat(document.querySelector("#val1").value);
+	const v2 = parseFloat(document.querySelector("#val2").value);
+	
+function add()
 {
-	let v1 = parseFloat(document.getElementById("val1").value);
-	let v2 = parseFloat(document.getElementById("val2").value);
-	if(isNaN(v1)||isNaN(v2))
-		alert("Enter a valid number!");
-	else if(id=="add")
-		document.getElementById("answer").value=v1+v2;
-	else if(id=="sub")
-		document.getElementById("answer").value=v1-v2;
-	else if(id=="mul")
-		document.getElementById("answer").value=v1*v2;
-	else if(id=="div")
-		if(v2!=0)
-		{
-			document.getElementById("answer").value=v1/v2;
-		}
-		else
-		{
-			document.getElementById("answer").value=0;
-			alert("Divide by Zero error");
-		}
+	const v1 = parseFloat(document.querySelector("#val1").value);
+	const v2 = parseFloat(document.querySelector("#val2").value);
+	document.querySelector("#answer").value=v1+v2;
 }
+function sub()
+{
+	const v1 = parseFloat(document.querySelector("#val1").value);
+	const v2 = parseFloat(document.querySelector("#val2").value);
+	document.querySelector("#answer").value=v1-v2;
+}
+function mul()
+{
+	const v1 = parseFloat(document.querySelector("#val1").value);
+	const v2 = parseFloat(document.querySelector("#val2").value);
+	document.querySelector("#answer").value=v1*v2;
+}
+function div()
+{
+	const v1 = parseFloat(document.querySelector("#val1").value);
+	const v2 = parseFloat(document.querySelector("#val2").value);
+	if(v2!=0)
+	document.querySelector("#answer").value=v1/v2;
+	else
+	{
+		document.querySelector("#answer").value=0;
+		alert('Divide by Zero error');
+	}
+}
+
 function cls()
 {
-	document.getElementById("val1").value=0;
-	document.getElementById("val2").value=0;
-	document.getElementById("answer").value=0;
+	document.querySelector("#val1").value=0;
+	document.querySelector("#val2").value=0;
+	document.querySelector("#answer").value=0;
 }
 </script>
-<style>
-input
-{
-  border: 0;
-  outline: 0;
-  background: transparent;
-  border-bottom: 1px solid white;
-  text-align:center;
-
-}
-</style>
-<body style="background-color:black;color:white;">
+<body>
 <br>
 <table border="10">
 <tr><th colspan=4 style="text-align:center;">Simple Calculator</th></tr>
-<tr><td>Value1</td><td colspan="3"><input type="number" id="val1" value=""></td></tr>
-<tr><td>Value2</td><td colspan="3"><input type="number" id="val2" value=""></td></tr>
-<tr><td>Answer</td><td colspan="2"><input type="number" value="0" id="answer" disabled><td><input type="button" value="C / CE" onclick="cls()" class="btn btn-danger"></td></tr>
+<tr><td>Value1</td><td colspan="3"><input type="number" id="val1" value="0"></td></tr>
+<tr><td>Value2</td><td colspan="3"><input type="number" id="val2" value="0"></td></tr>
+<tr><td>Answer</td><td colspan="2"><input type="number" value="0" id="answer" disabled><td><input type="button" value="C / CE" onclick="cls()"></td></tr>
 <tr>
-	<td>
-		<input type="button" value="Addition" id="add" onclick="calc(this.id)" class="btn btn-success">
-	</td>
-	<td>
-		<input type="button" value="Subtraction" id="sub" onclick="calc(this.id)" class="btn btn-info">
-	</td>
-	<td>
-		<input type="button" value="Multiplication" id="mul" onclick="calc(this.id)" class="btn btn-warning">
-	</td>
-	<td>
-		<input type="button" value="Division" id="div" onclick="calc(this.id)" class="btn btn-primary">
-	</td>
+	<td><input type="button" value="Addition" id="add" onclick="add()"></td>
+	<td><input type="button" value="Subtraction" id="sub" onclick="sub()"></td>
+	<td><input type="button" value="Multiplication" id="mul" onclick="mul()"></td>
+	<td><input type="button" value="Division" id="div" onclick="div()"></td>
 </tr>
-
 </table>
-</body>
-
