@@ -1,12 +1,9 @@
 <style>
-*
-{
-	text-align: center;
-}
+*{	text-align: center;	}
 </style>
 <script>
-	document.write("<table border=10 align=center><tr><th colspan='3'>Numbers from 0 to 10 with their Squares and Cubes</th></tr>");
-	document.write("<tr><td>Number</td><td>Square</td><td>Cubes</td></tr>");
+	document.write("<table border=1 align=center><tr><th colspan=3>Numbers from 0 to 10 with their Squares and Cubes</th></tr>");
+	document.write("<tr><td>Number</td><td>Square</td><td>Cube</td></tr>");
 	for(let n = 0 ; n < 11; n++)
 		document.write("<tr><td>" + n + "</td><td>" + (n * n) +"</td><td>" + (n * n * n) +"</td></tr>");
 	document.write("</table>");
