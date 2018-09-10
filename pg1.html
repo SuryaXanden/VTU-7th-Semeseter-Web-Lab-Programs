@@ -3,29 +3,29 @@ function add()
 {
 	const v1 = document.querySelector("#val1").value;
 	const v2 = document.querySelector("#val2").value;
-	document.querySelector("#answer").value=parseFloat(v1)+parseFloat(v2);
+	document.querySelector("#ans").value=parseFloat(v1)+parseFloat(v2);
 }
 function sub()
 {
 	const v1 = document.querySelector("#val1").value;
 	const v2 = document.querySelector("#val2").value;
-	document.querySelector("#answer").value=v1-v2;
+	document.querySelector("#ans").value=v1-v2;
 }
 function mul()
 {
 	const v1 = document.querySelector("#val1").value;
 	const v2 = document.querySelector("#val2").value;
-	document.querySelector("#answer").value=v1*v2;
+	document.querySelector("#ans").value=v1*v2;
 }
 function div()
 {
 	const v1 = document.querySelector("#val1").value;
 	const v2 = document.querySelector("#val2").value;
 	if(v2!=0)
-	document.querySelector("#answer").value=v1/v2;
+	document.querySelector("#ans").value=v1/v2;
 	else
 	{
-		document.querySelector("#answer").value=0;
+		document.querySelector("#ans").value=0;
 		alert('Divide by Zero error');
 	}
 }
@@ -33,7 +33,7 @@ function cls()
 {
 	document.querySelector("#val1").value=0;
 	document.querySelector("#val2").value=0;
-	document.querySelector("#answer").value=0;
+	document.querySelector("#ans").value=0;
 }
 </script>
 <table border="10">
@@ -50,7 +50,7 @@ function cls()
 	</tr>
 	<tr>
 		<td>Answer</td>
-		<td colspan="2"><input type="number" value="0" id="answer" disabled>
+		<td colspan="2"><input type="number" value="0" id="ans" disabled>
 		<td><input type="button" value="C / CE" onclick="cls()"></td>
 	</tr>
 	<tr>
