@@ -1,29 +1,26 @@
 <script>
-	const v1 = parseFloat(document.querySelector("#val1").value);
-	const v2 = parseFloat(document.querySelector("#val2").value);
-	
 function add()
 {
-	const v1 = parseFloat(document.querySelector("#val1").value);
-	const v2 = parseFloat(document.querySelector("#val2").value);
+	const v1 = document.querySelector("#val1").value;
+	const v2 = document.querySelector("#val2").value;
 	document.querySelector("#answer").value=v1+v2;
 }
 function sub()
 {
-	const v1 = parseFloat(document.querySelector("#val1").value);
-	const v2 = parseFloat(document.querySelector("#val2").value);
+	const v1 = document.querySelector("#val1").value;
+	const v2 = document.querySelector("#val2").value;
 	document.querySelector("#answer").value=v1-v2;
 }
 function mul()
 {
-	const v1 = parseFloat(document.querySelector("#val1").value);
-	const v2 = parseFloat(document.querySelector("#val2").value);
+	const v1 = document.querySelector("#val1").value;
+	const v2 = document.querySelector("#val2").value;
 	document.querySelector("#answer").value=v1*v2;
 }
 function div()
 {
-	const v1 = parseFloat(document.querySelector("#val1").value);
-	const v2 = parseFloat(document.querySelector("#val2").value);
+	const v1 = document.querySelector("#val1").value;
+	const v2 = document.querySelector("#val2").value;
 	if(v2!=0)
 	document.querySelector("#answer").value=v1/v2;
 	else
@@ -32,7 +29,6 @@ function div()
 		alert('Divide by Zero error');
 	}
 }
-
 function cls()
 {
 	document.querySelector("#val1").value=0;
@@ -43,14 +39,26 @@ function cls()
 <body>
 <br>
 <table border="10">
-<tr><th colspan=4 style="text-align:center;">Simple Calculator</th></tr>
-<tr><td>Value1</td><td colspan="3"><input type="number" id="val1" value="0"></td></tr>
-<tr><td>Value2</td><td colspan="3"><input type="number" id="val2" value="0"></td></tr>
-<tr><td>Answer</td><td colspan="2"><input type="number" value="0" id="answer" disabled><td><input type="button" value="C / CE" onclick="cls()"></td></tr>
-<tr>
-	<td><input type="button" value="Addition" id="add" onclick="add()"></td>
-	<td><input type="button" value="Subtraction" id="sub" onclick="sub()"></td>
-	<td><input type="button" value="Multiplication" id="mul" onclick="mul()"></td>
-	<td><input type="button" value="Division" id="div" onclick="div()"></td>
-</tr>
+	<tr>
+		<th colspan=4 style="text-align:center;">Simple Calculator</th>
+	</tr>
+	<tr>
+		<td>Value1</td>
+		<td colspan="3"><input type="number" id="val1" value="0"></td>
+	</tr>
+	<tr>
+		<td>Value2</td>
+		<td colspan="3"><input type="number" id="val2" value="0"></td>
+	</tr>
+	<tr>
+		<td>Answer</td>
+		<td colspan="2"><input type="number" value="0" id="answer" disabled>
+		<td><input type="button" value="C / CE" onclick="cls()"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="Addition" id="add" onclick="add()"></td>
+		<td><input type="button" value="Subtraction" id="sub" onclick="sub()"></td>
+		<td><input type="button" value="Multiplication" id="mul" onclick="mul()"></td>
+		<td><input type="button" value="Division" id="div" onclick="div()"></td>
+	</tr>
 </table>
