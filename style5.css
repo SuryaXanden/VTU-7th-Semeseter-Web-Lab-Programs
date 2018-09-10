@@ -2,41 +2,46 @@
 {
 	font-size: 28px;
 	background-color: black;
+	color: white;
 	display: block;
 }
 student
 {
-	margin-top: 20pt;
-	margin-bottom: 20pt;
-	margin-left: 20pt;	
+	margin-top: 10px;
 }
 usn
 {
-	color: yellow;
-	font-size: 28pt;	
+	color: rgb(200,200,0);
+	margin-left: 10px;
+	font-size: 24px;
 }
 name
 {
 	color: green;
-	font-size: 28pt;
-}
-college
-{
-	color: blue;
-	margin-left: 20pt;
-}
-branch
-{
-	color: red;
-	margin-left: 20pt;
+	margin-left: 20px;
+	font-size: 24px;
 }
 yoj
 {
 	color: orange;
-	margin-left: 20pt;
+	margin-left: 20px;
+	font-size: 24px;
+}
+college
+{
+	color: blue;
+	margin-left: 20px;
+	font-size: 20px;
+}
+branch
+{
+	color: red;
+	margin-left: 20px;
+	font-size: 20px;
 }
 email
 {
 	color: violet;
-	margin-left: 20pt;
+	margin-left: 20px;
+	font-size: 20px;
 }

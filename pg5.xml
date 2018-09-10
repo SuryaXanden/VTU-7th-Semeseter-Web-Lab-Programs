@@ -1,28 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="style5.css"?>
-<data>
+<html>
+<head>
+	<h1>Student Description</h1>
+</head>
+<students>
 	<student>
-		<usn>1CE15CS145</usn>
-		<name>Surya U</name>
-		<college>CEC</college>
-		<branch>CSE</branch>
-		<yoj>2015</yoj>
-		<email>iamsuryau@gmail.com</email>
+		<usn>USN: 1CE15CS120</usn>
+		<name>Name: Samuel Kenneth Gunjal</name>
+		<college>College: City Engineering College</college>
+		<branch>Branch: Computer Science Engineering</branch>
+		<yoj>Year: 2015</yoj>
+		<email>E-mail: knightkenneth73@gmail.com</email>
 	</student>
 	<student>
-		<usn>1CE15CS142</usn>
-		<name>Sumedha S Athreya</name>
-		<college>CEC</college>
-		<branch>CSE</branch>
-		<yoj>2015</yoj>
-		<email>sumedha.athreya98@gmail.com</email>
+		<usn>USN: 1CE15CS142</usn>
+		<name>Name: Sumedha S Athreya</name>
+		<college>College: City Engineering College</college>
+		<branch>Branch: Computer Science Engineering</branch>
+		<yoj>Year: 2015</yoj>
+		<email>E-mail: sumedha.athreya98@gmail.com</email>
 	</student>
 	<student>
-		<usn>1CE15CS120</usn>
-		<name>Samuel Kenneth Gunjal</name>
-		<college>CEC</college>
-		<branch>CSE</branch>
-		<yoj>2015</yoj>
-		<email>knightkenneth73@gmail.com</email>
+		<usn>USN: 1CE15CS145</usn>
+		<name>Name: Surya U</name>
+		<college>College: City Engineering College</college>
+		<branch>Branch: Computer Science Engineering</branch>
+		<yoj>Year: 2015</yoj>
+		<email>E-mail: iamsuryau@gmail.com</email>
 	</student>
-</data>
+</students>
+</html>
