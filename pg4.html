@@ -1,34 +1,34 @@
 <script>
-function s(str)
-{
-	str = str.toLowerCase();
-	for(let i = 0 ; i < str.length; i++)
+	function s(str)
 	{
-		if((str[i]=='a')||(str[i]=='e')||(str[i]=='i')||(str[i]=='o')||(str[i]=='u'))
+		str = str.toLowerCase();
+		for(let i = 0 ; i < str.length; i++)
 		{
-			return i+1;
+			if((str[i]=='a')||(str[i]=='e')||(str[i]=='i')||(str[i]=='o')||(str[i]=='u'))
+			{
+				return i+1;
+			}
 		}
+		return -1;
 	}
-	return -1;
-}
-function n(num)
-{
-	if(!(isNaN(num)))
+	function n(num)
 	{
-		num = String(num.trim());
-		num = num.split("");
-		num = num.reverse();
-		num = num.join("");
-		return num;
+		if(!(isNaN(num)))
+		{
+			num = String(num.trim());
+			num = num.split("");
+			num = num.reverse();
+			num = num.join("");
+			return num;
+		}
+		else
+			return "";
 	}
-	else
-		return "";
-}
-let strings = prompt("Enter a string: ","");
-let numbers = prompt("Enter a number: ","");
-let s1='',n1='';
-s1 = s(strings);
-n1 = n(numbers);
-alert("The position of the leftmost vowel: " + s1);
-alert("The reversed number: " + n1);
+	let strings = prompt("Enter a string: ","");
+	let numbers = prompt("Enter a number: ","");
+	let s1='',n1='';
+	s1 = s(strings);
+	n1 = n(numbers);
+	alert("The position of the leftmost vowel: " + s1);
+	alert("The reversed number: " + n1);
 </script>
