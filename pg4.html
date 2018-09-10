@@ -3,12 +3,8 @@
 	{
 		str = str.toLowerCase();
 		for(let i = 0 ; i < str.length; i++)
-		{
 			if((str[i]=='a')||(str[i]=='e')||(str[i]=='i')||(str[i]=='o')||(str[i]=='u'))
-			{
 				return i+1;
-			}
-		}
 		return -1;
 	}
 	function n(num)
@@ -26,9 +22,8 @@
 	}
 	let strings = prompt("Enter a string: ","");
 	let numbers = prompt("Enter a number: ","");
-	let s1='',n1='';
-	s1 = s(strings);
-	n1 = n(numbers);
+	let s1 = s(strings);
+	let n1 = n(numbers);
 	alert("The position of the leftmost vowel: " + s1);
 	alert("The reversed number: " + n1);
 </script>
