@@ -1,0 +1,64 @@
+  <script>
+function getval()
+{
+	const v1 = document.querySelector("#val1").value;
+	const v2 = document.querySelector("#val2").value;
+	return {v1,v2};
+}
+function add()
+{
+	let v = getval();
+	document.querySelector("#ans").value = parseFloat(v.v1)+parseFloat(v.v2);
+}
+function sub()
+{
+	let v = getval();
+	document.querySelector("#ans").value = v.v1-v.v2;
+}
+function mul()
+{
+	let v = getval();
+	document.querySelector("#ans").value = v.v1*v.v2;
+}
+function div()
+{
+	let v = getval();	
+	if(v.v2!=0)
+		document.querySelector("#ans").value = v.v1/v.v2;
+	else
+	{
+		document.querySelector("#ans").value = 0;
+		alert('Divide by Zero error');
+	}
+}
+function cls()
+{
+	document.querySelector("#val1").value = 0;
+	document.querySelector("#val2").value = 0;
+	document.querySelector("#ans").value = 0;
+}
+</script>
+<table border=10 align=center>
+	<tr>
+		<th colspan=4 style="text-align:center;">Simple Calculator</th>
+	</tr>
+	<tr>
+		<td>Value1</td>
+		<td colspan=3><input type="number" id="val1" value="0"></td>
+	</tr>
+	<tr>
+		<td>Value2</td>
+		<td colspan=3><input type="number" id="val2" value="0"></td>
+	</tr>
+	<tr>
+		<td>Answer</td>
+		<td colspan=2><input type="number" value="0" id="ans" disabled></td>
+		<td><input type="button" value="C / CE" onclick="cls()"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="Addition" onclick="add()"></td>
+		<td><input type="button" value="Subtraction" onclick="sub()"></td>
+		<td><input type="button" value="Multiplication" onclick="mul()"></td>
+		<td><input type="button" value="Division" onclick="div()"></td>
+	</tr>
+</table>
